@@ -8,7 +8,7 @@
 
 Remove jit overhead from your package and compile it into a system image.
 
-## Usage Example
+## Usage example
 E.g. do:
 ```Julia
 using PackageCompiler
@@ -22,7 +22,7 @@ PackageCompiler.compile_package("Matcha", "UnicodeFun", force = false, reuse = t
 
 # You can define a file that will get run for snooping explicitely like this:
 # this makes sure, that binary gets cached for all functions called in `for_snooping.jl`
-PackageCompiler.compie_package(("Matcha", "relative/path/for_snooping.jl"))
+PackageCompiler.complie_package("Matcha", "relative/path/for_snooping.jl")
 
 # if you used force and want your old system image back (force will overwrite the default system image Julia uses) you can run:
 PackageCompiler.revert() 
